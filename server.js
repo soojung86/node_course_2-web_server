@@ -71,6 +71,12 @@ app.get('/about',(req, res) => {
 
 // /bad - send back json with erroMessage property
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Project'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to handle request'
